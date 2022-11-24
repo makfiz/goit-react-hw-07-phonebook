@@ -22,8 +22,7 @@ const ContactList = () => {
    return ( 
              <List>
                     <Item>Name/Phone:</Item>
-                    {isLoading && <p>Loading tasks...</p>}
-                    {error && <p>{error}</p>}
+
                 {(filter === ''
                     ?
                     contacts
@@ -39,7 +38,9 @@ const ContactList = () => {
                    </Btn></ItemNav>
                    </Item>)
            })   
-                }  
+                }
+                {isLoading && <p>Loading tasks...</p>}
+                {error && <p>{error}</p>}      
             </List>
         )
 }
