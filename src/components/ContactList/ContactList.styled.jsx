@@ -14,10 +14,10 @@ display: flex;
 justify-content: space-between;
 `
 export const Btn = styled.button`
-    max-width: 50%;
     border:none;
     border-radius:10px;
-    margin-right:30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
    &:hover{
     background-color:#2f2f37;
     color:white;
@@ -26,5 +26,5 @@ export const Btn = styled.button`
 export const ItemNav = styled.div`
 display:flex;
 flex-direction:column;
-align-items: center;
+justify-content: center;
 `

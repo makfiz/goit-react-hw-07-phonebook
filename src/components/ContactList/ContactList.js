@@ -35,7 +35,7 @@ const ContactList = () => {
 
                    <Item key={contact.id}>
                    <div><p>{contact.name} </p><p>{contact.phone }</p></div>
-                    <ItemNav>{date.toLocaleString()} <Btn id={contact.id} onClick={(e) => dispatch(deleteContact(e.target.id))}>
+                    <ItemNav><Btn id={contact.id} onClick={(e) => dispatch(deleteContact(e.target.id))}>
                        Delete
                    </Btn></ItemNav>
                    </Item>)
