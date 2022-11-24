@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const filterInitialState = {
-  value:"" 
-};
+import { filterInitialState } from "redux/constants";
+
 
 const filterSlice = createSlice({
     name: "filter",
