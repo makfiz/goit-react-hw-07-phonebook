@@ -30,7 +30,6 @@ const ContactList = () => {
                     :
                     filterByName()
            ).map(contact => {
-               let date = new Date(contact.createdAt)
                return (
 
                    <Item key={contact.id}>
