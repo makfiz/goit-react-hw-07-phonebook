@@ -3,14 +3,14 @@ import {  useSelector, useDispatch  } from "react-redux";
 import ContactForm from 'components/ContactForm/ContactForm'
 import Filter from 'components/Filter/Filter'
 import ContactList from "components/ContactList/ContactList";
-import { getContacts} from "redux/selectors";
+import { selectContacts} from "redux/selectors";
 // import { addContact } from "redux/contactsSlice";
 
 import { fetchContacts, addContact } from "redux/operations";
 
 const Phonebook = () => {
     const dispatch = useDispatch();
-    const contacts = useSelector(getContacts)
+    const contacts = useSelector(selectContacts)
     
         useEffect(() => {
             dispatch(fetchContacts());

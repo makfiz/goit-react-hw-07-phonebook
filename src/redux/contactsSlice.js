@@ -10,13 +10,6 @@ const extraActions = [fetchContacts, addContact, deleteContact]
 const contactsSlice = createSlice({
     name: "contacts",
     initialState: contactsInitialState,
-    reducers: {
-        
-        deleteContact(state, action) {
-            const index = state.items.findIndex(contact => contact.id === action.payload)
-            state.items.splice(index, 1);
-        }
-    },
     extraReducers: builder => {
         builder.addCase(fetchContacts.fulfilled, (state, action) => {
             state.items = action.payload
@@ -25,7 +18,7 @@ const contactsSlice = createSlice({
             state.items.push(action.payload)
         })
         .addCase(deleteContact.fulfilled, (state, action) => {
-            const index = state.items.findIndex(contact => contact.id === action.payload)
+            const index = state.items.findIndex(contact => contact.id === action.payload.id)
             state.items.splice(index, 1);
         })
         .addMatcher(

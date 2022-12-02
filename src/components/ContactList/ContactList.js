@@ -1,17 +1,17 @@
 import { List, Item, Btn, ItemNav } from 'components/ContactList/ContactList.styled'
 import {useDispatch, useSelector  } from "react-redux";
 import {deleteContact} from "redux/operations";   
-import { getContacts, getFilterValue, getIsLoading, getError } from "redux/selectors";
+import { selectContacts, selectFilterValue, selectIsLoading, selectError } from "redux/selectors";
 
 
 
 
 const ContactList = () => {
     const dispatch = useDispatch();
-    const contacts = useSelector(getContacts)
-    const filter = useSelector(getFilterValue)
-    const isLoading = useSelector(getIsLoading)
-    const error = useSelector(getError)
+    const contacts = useSelector(selectContacts)
+    const filter = useSelector(selectFilterValue)
+    const isLoading = useSelector(selectIsLoading)
+    const error = useSelector(selectError)
 
 
     const filterByName = () => {
